@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fathi Zaher | Creative Portfolio</title>
+    <style>
+        /* General Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #0f0c29; color: white; scroll-behavior: smooth; }
+
+        /* --- Navbar Styles --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #ff0055; /* Background Color */
+            padding: 15px 0;
+            z-index: 1000;
+            text-align: center;
+        }
+        .navbar a {
+            color: white; /* Font Color */
+            text-decoration: none;
+            padding: 14px 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #00dbde; /* Hover Effect */
+            color: #000;
+            border-radius: 5px;
+        }
+
+        /* --- Hero Video Section (Video with Text Overlay) --- */
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        .hero-text {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        /* --- Image Styling (Centered, Filter, Rounded) --- */
+        .profile-img-container { text-align: center; padding: 50px 0; }
+        .profile-img {
+            width: 300px;
+            border-radius: 50px; /* Rounded Edges */
+            filter: sepia(60%) hue-rotate(290deg); /* CSS Filter */
+            transition: 0.5s;
+        }
+
+        /* --- Two Column Layout --- */
+        .row {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+        }
+        .column {
+            width: 45%; /* Width */
+            height: 300px; /* Height */
+            background: #24243e;
+            padding: 20px;
+            color: #00dbde; /* Font Color */
+            border-radius: 15px;
+        }
+
+        /* --- Table Styles --- */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            border: 3px solid #ff0055; /* Border */
+        }
+        th, td {
+            padding: 15px; /* Cell Padding */
+            text-align: center;
+            border: 1px solid #444;
+        }
+        tr:first-child {
+            background-color: #ff0055; /* Top Row Background Color */
+            color: white;
+        }
+
+        /* --- Hover Effect for P Element --- */
+        .hover-p {
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 20px;
+            transition: 0.4s;
+        }
+        .hover-p:hover {
+            color: #ff0055;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+
+        /* --- Image Overlay Fade --- */
+        .overlay-container {
+            position: relative;
+            width: 300px;
+            margin: auto;
+        }
+        .overlay-img { width: 100%; border-radius: 10px; }
+        .overlay-fade {
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+            height: 100%; width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #00dbde;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .overlay-container:hover .overlay-fade { opacity: 1; }
+        .overlay-text { color: black; font-weight: bold; }
+
+        /* --- Footer --- */
+        footer {
+            background: #111;
+            padding: 20px;
+            margin-top: 50px;
+            text-align: center; /* Centered */
+            font-weight: bold; /* Bold */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <video autoplay muted loop id="bg-video">
+            <source src="https://cdn.pixabay.com/video/2026/01/19/328740_large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-text">
+            <h1>FATHI ZAHER</h1>
+            <p>Digital Creator & Portfolio Explorer</p>
+        </div>
+    </section>
+
+    <div class="profile-img-container" id="about">
+        <h2>The Creator</h2>
+        <img src="https://picsum.photos/400/400" alt="Fathi" class="profile-img">
+        <p class="hover-p">I am a student passionate about building unique digital experiences.</p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h3>Mission</h3>
+            <p>To master HTML and CSS and create websites that bridge the gap between functionality and art.</p>
+        </div>
+        <div class="column">
+            <h3>Vision</h3>
+            <p>Exploring the potential of Bootstrap and modern frameworks to solve real-world problems.</p>
+        </div>
+    </div>
+
+    <h2 style="text-align: center;">Project Spotlight</h2>
+    <div class="overlay-container">
+        <img src="https://picsum.photos/300/200" alt="Project" class="overlay-img">
+        <div class="overlay-fade">
+            <div class="overlay-text">Fathi's Work</div>
+        </div>
+    </div>
+
+    <h2 style="text-align: center; margin-top: 50px;">Skill Proficiency</h2>
+    <table>
+        <tr>
+            <th>Technology</th>
+            <th>Level</th>
+            <th>Year Started</th>
+        </tr>
+        <tr>
+            <td>HTML5</td>
+            <td>Advanced</td>
+            <td>2024</td>
+        </tr>
+        <tr>
+            <td>CSS3</td>
+            <td>Intermediate</td>
+            <td>2025</td>
+        </tr>
+        <tr>
+            <td>Bootstrap</td>
+            <td>Beginner</td>
+            <td>2026</td>
+        </tr>
+    </table>
+
+    <footer>
+        <p>Created by Fathi Zaher &copy; 2026. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
